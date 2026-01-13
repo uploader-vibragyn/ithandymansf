@@ -1,0 +1,8 @@
+
+{
+  "name": "Bay Area IT & AI Handyman",
+  "description": "A concierge-style IT and AI assistant for SF professionals and small businesses, featuring a voice-enabled triage system and service estimator.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
