@@ -1,26 +1,27 @@
-
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Pricing: React.FC = () => {
   return (
     <div className="py-16 px-4 max-w-3xl mx-auto">
-      <h1 className="text-3xl font-semibold mb-4 text-center">Pricing Policy</h1>
-      <p className="text-zinc-500 text-center mb-16 max-w-xl mx-auto">We believe in transparent, value-based pricing. No subscriptions, no fluff—just professional time for professional results.</p>
-      
+      <h1 className="text-3xl font-semibold mb-4 text-center">Pricing</h1>
+      <p className="text-zinc-500 text-center mb-16 max-w-xl mx-auto">Transparent, hourly rates. No subscriptions, no hidden fees — just professional time for professional results.</p>
+
       <div className="space-y-12">
         <section>
-          <h2 className="text-lg font-semibold border-b border-zinc-200 pb-2 mb-4">Standard Hourly Rates</h2>
+          <h2 className="text-lg font-semibold border-b border-zinc-200 pb-2 mb-4">Hourly Rates</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-white p-5 rounded-lg border border-zinc-200">
               <span className="text-zinc-400 text-xs uppercase block mb-1">Remote Session</span>
               <span className="text-2xl font-bold">$125 <span className="text-sm font-normal text-zinc-500">/ hr</span></span>
+              <p className="text-xs text-zinc-400 mt-2">Minimum 1-hour booking</p>
             </div>
             <div className="bg-white p-5 rounded-lg border border-zinc-200">
-              <span className="text-zinc-400 text-xs uppercase block mb-1">On-Site (SF Proper)</span>
-              <span className="text-2xl font-bold">$175 <span className="text-sm font-normal text-zinc-500">/ hr</span></span>
+              <span className="text-zinc-400 text-xs uppercase block mb-1">AI, Email & Chat Automation</span>
+              <span className="text-2xl font-bold">$150 <span className="text-sm font-normal text-zinc-500">/ hr</span></span>
+              <p className="text-xs text-zinc-400 mt-2">Minimum 1-hour booking</p>
             </div>
           </div>
-          <p className="mt-4 text-sm text-zinc-500 italic">* Minimum 1-hour booking for remote, 2-hour for on-site.</p>
         </section>
 
         <section>
@@ -35,32 +36,50 @@ const Pricing: React.FC = () => {
               </thead>
               <tbody className="divide-y divide-zinc-200">
                 <tr>
-                  <td className="px-6 py-4">Small Office Network Setup</td>
-                  <td className="px-6 py-4">$450 - $900</td>
+                  <td className="px-6 py-4">Custom AI Workflow (n8n, GPT)</td>
+                  <td className="px-6 py-4">$500 - $2,000</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4">Custom AI Content Workflow</td>
-                  <td className="px-6 py-4">$1,200 - $3,500</td>
+                  <td className="px-6 py-4">Email & Chat Automation Setup</td>
+                  <td className="px-6 py-4">$600 - $2,500</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4">Database Migration (up to 50GB)</td>
-                  <td className="px-6 py-4">$800 - $2,000</td>
+                  <td className="px-6 py-4">Website Fix & Integration</td>
+                  <td className="px-6 py-4">$300 - $1,200</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4">Broken Tech Fix (one-time session)</td>
+                  <td className="px-6 py-4">$125 - $375</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </section>
 
+        <section>
+          <h2 className="text-lg font-semibold border-b border-zinc-200 pb-2 mb-4">Ongoing Support</h2>
+          <div className="bg-white p-6 rounded-xl border border-zinc-200">
+            <p className="text-zinc-600 text-sm leading-relaxed mb-2">
+              For small teams that need recurring tech help, we offer a light retainer — a fixed number of hours per month at a discounted rate.
+            </p>
+            <p className="text-zinc-500 text-sm">Contact us to discuss a custom arrangement.</p>
+          </div>
+        </section>
+
         <div className="bg-amber-50 border border-amber-200 p-6 rounded-xl">
-          <h3 className="text-amber-800 font-semibold mb-2 flex items-center gap-2">
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-            </svg>
-            Service Boundary
-          </h3>
+          <h3 className="text-amber-800 font-semibold mb-2">Note on Estimates</h3>
           <p className="text-sm text-amber-900/80 leading-relaxed">
-            Estimates provided by our AI assistant are preliminary. Final project costs are confirmed after a discovery call or onsite assessment. We do not provide emergency 24/7 on-call services unless previously contracted.
+            The AI assistant provides preliminary estimates. Final project costs are confirmed after an initial conversation. We do not bill for time spent assessing whether we can help.
           </p>
+        </div>
+
+        <div className="text-center">
+          <Link
+            to="/book"
+            className="bg-zinc-900 text-white px-8 py-3 rounded-lg font-medium hover:bg-zinc-800 transition-colors inline-block"
+          >
+            Book a Session
+          </Link>
         </div>
       </div>
     </div>

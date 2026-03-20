@@ -1,0 +1,32 @@
+# IT Handyman SF
+
+> Remote IT support, AI workflow setup, email and chat automation, and website fixes for small businesses in San Francisco and the Bay Area.
+
+## What we do
+
+We help small businesses that want to modernize with AI but don't want to deal with the technical side themselves. We do the work — they use the results.
+
+## Services
+
+- **Broken Tech Fix** — Remote troubleshooting for broken software, slow systems, app crashes, SaaS configuration, and email client issues. Remote only. Does not include hardware repair.
+
+- **AI Setup for Real Work** — Custom GPTs, n8n workflows, business automation, AI-powered document and data workflows. No theory, no courses — just working tools.
+
+- **Email & Chat Automation** — Automatic email responses, AI email triage, smart replies, live chat bots for websites, lead qualification bots.
+
+- **Website & Online Tool Fixes** — Broken forms, failed integrations, misconfigured dashboards. Not a full web agency.
+
+## Pricing
+
+- Remote IT sessions: $125/hr (min 1 hour)
+- AI and automation work: $150/hr (min 1 hour)
+- Flat-fee projects: $300–$2,500 depending on scope
+
+## Location
+
+Based in San Francisco. Serves the entire Bay Area. Remote clients welcome from anywhere in the US.
+
+## Contact
+
+Book a session at: https://ithandymansf.com/book
+Response within 4 business hours.
