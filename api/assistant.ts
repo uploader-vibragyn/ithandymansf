@@ -45,13 +45,51 @@ BEHAVIOR RULES:
 - After confirming a fit, always end with: "Please go ahead and fill out the booking form below — we'll get back to you within 4 business hours."
 `;
 
+// Simple in-memory rate limiter: max 10 requests per IP per hour
+const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
+const MAX_REQUESTS = 10;
+const WINDOW_MS = 60 * 60 * 1000; // 1 hour
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const entry = rateLimitMap.get(ip);
+
+  if (!entry || now > entry.resetAt) {
+    rateLimitMap.set(ip, { count: 1, resetAt: now + WINDOW_MS });
+    return false;
+  }
+
+  if (entry.count >= MAX_REQUESTS) return true;
+
+  entry.count++;
+  return false;
+}
+
 export default async function handler(req: Request) {
   if (req.method !== "POST") {
     return new Response("Method not allowed", { status: 405 });
   }
 
+  const ip =
+    req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
+
+  if (isRateLimited(ip)) {
+    return new Response(
+      JSON.stringify({ error: "Too many requests. Please try again later." }),
+      { status: 429, headers: { "Content-Type": "application/json" } }
+    );
+  }
+
   try {
     const { messages } = await req.json();
+
+    // Block obvious abuse: reject if more than 8 messages in history
+    if (Array.isArray(messages) && messages.length > 8) {
+      return new Response(
+        JSON.stringify({ error: "Session limit reached." }),
+        { status: 429, headers: { "Content-Type": "application/json" } }
+      );
+    }
 
     const completion = await openai.chat.completions.create({
       model: "gpt-4o-mini",
