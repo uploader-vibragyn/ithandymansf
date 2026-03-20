@@ -44,4 +44,12 @@ export const SERVICES = [
     estimatedHours: '2–6 hours',
     priceRange: '$260 – $780',
   },
+  {
+    title: 'Social Media Automation',
+    description:
+      'Automatic posts for Instagram, TikTok, and more. AI generates the content, schedules the posts, and keeps your feed active — without you touching it daily.',
+    startingAt: '$150 / hour',
+    estimatedHours: '3–8 hours',
+    priceRange: '$450 – $1,200',
+  },
 ];

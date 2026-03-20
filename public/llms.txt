@@ -16,6 +16,8 @@ We help small businesses that want to modernize with AI but don't want to deal w
 
 - **Website & Online Tool Fixes** — Broken forms, failed integrations, misconfigured dashboards. Not a full web agency.
 
+- **Social Media Automation** — Automatic post generation and scheduling for Instagram, TikTok, YouTube Shorts, Twitter/X, and LinkedIn using AI. Keeps feeds active without daily manual work. Does not include content strategy, photography, or paid ads.
+
 ## Pricing
 
 - Remote IT sessions: $125/hr (min 1 hour)
