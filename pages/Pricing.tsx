@@ -44,6 +44,10 @@ const Pricing: React.FC = () => {
                   <td className="px-6 py-4">$600 - $2,500</td>
                 </tr>
                 <tr>
+                  <td className="px-6 py-4">Social Media Automation (Instagram, TikTok, etc.)</td>
+                  <td className="px-6 py-4">$450 - $1,200</td>
+                </tr>
+                <tr>
                   <td className="px-6 py-4">Website Fix & Integration</td>
                   <td className="px-6 py-4">$300 - $1,200</td>
                 </tr>
